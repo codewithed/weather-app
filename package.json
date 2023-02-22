@@ -1,0 +1,23 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "a simple weather-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codewithed/weather-app.git"
+  },
+  "author": "codewithed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codewithed/weather-app/issues"
+  },
+  "homepage": "https://github.com/codewithed/weather-app#readme",
+  "dependencies": {
+    "webpack": "^5.75.0"
+  }
+}
