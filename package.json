@@ -19,5 +19,6 @@
   "homepage": "https://github.com/codewithed/weather-app#readme",
   "dependencies": {
     "webpack": "^5.75.0"
-  }
+  },
+  "devDependencies": {}
 }
