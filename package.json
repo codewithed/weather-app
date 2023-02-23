@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "a simple weather-app",
   "main": "index.js",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch"
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/codewithed/weather-app#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "webpack": "^5.75.0"
+    "os-browserify": "^0.3.0",
+    "webpack-cli": "^5.0.1"
   }
 }
