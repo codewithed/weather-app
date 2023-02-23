@@ -1,0 +1,1 @@
+(()=>{"use strict";fetch("https://api.openweathermap.org/data/2.5/weather?q=London&APPID=86566ed62874b0000c32b9c0d45d9c29")})();
