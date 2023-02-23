@@ -4,7 +4,7 @@ const usefulData = {};
 
 function getUsefulData(weatherData) {
   usefulData.city = weatherData.name;
-  usefulData.description = weatherData.weather.description;
+  usefulData.description = weatherData.weather[0].main;
   usefulData.temp = weatherData.main.temp;
   usefulData.humidity = weatherData.main.humidity;
   usefulData.windspeed = weatherData.wind.speed;
@@ -17,5 +17,5 @@ async function getWeatherData(location) {
     .then((data) => getUsefulData(data));
 }
 
-getWeatherData('Cairo');
+getWeatherData('accra');
 console.log(usefulData);
