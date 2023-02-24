@@ -1,21 +1,24 @@
 import API_KEY from './api';
 
-const usefulData = {};
-
-function getUsefulData(weatherData) {
-  usefulData.city = weatherData.name;
-  usefulData.description = weatherData.weather[0].main;
-  usefulData.temp = weatherData.main.temp;
-  usefulData.humidity = weatherData.main.humidity;
-  usefulData.windspeed = weatherData.wind.speed;
+function createWeatherCard(data) {
+  const main = document.getElementById('main');
+  const card = document.createElement('div');
+  card.classList.add('weather-card');
+  card.innerHTML = `<p>City: ${data.name}</p>
+                      <p>Description: ${data.weather[0].main}</p>
+                      <p>Temp: ${data.main.temp} F</p>
+                      <p>Humidity: ${data.main.humidity}</p>
+                      <p>Windspeed: ${data.wind.speed}</p>`;
+  main.appendChild(card);
 }
 
 async function getWeatherData(location) {
   const loc = location;
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&APPID=${API_KEY}`)
     .then((response) => response.json())
-    .then((data) => getUsefulData(data));
+    .then((data) => {
+      createWeatherCard(data);
+    });
 }
 
 getWeatherData('accra');
-console.log(usefulData);
