@@ -1,7 +1,7 @@
 :root {
     --font-xl : 30px;
     --font-big: 24px;
-    --font-normal: 18px;
+    --font-normal: 20px;
     --header-bg: #0ea5e9;
     --bg-primary: #ecfeff;
     --card-bg: #a5f3fc;
@@ -19,9 +19,8 @@ body {
 
 .container {
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
-    justify-content: space-between;
+    flex-grow: 1;
 }
 
 .title {
@@ -71,7 +70,7 @@ body {
     border-radius: 8px;
     color: whitesmoke;
     font-size: var(--font-normal);
-    margin-top: 80px;
+    margin: 5%;
 }
 
 .footer {
