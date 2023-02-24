@@ -11,9 +11,9 @@ function createWeatherCard(data) {
   errorHolder.innerHTML = '';
   const card = document.createElement('div');
   card.classList.add('weather-card');
-  card.innerHTML = `<p>City: ${data.name}</p>
+  card.innerHTML = `<h1>${data.name}</h1>
                       <p>Description: ${data.weather[0].main}</p>
-                      <p>Temp: ${data.main.temp} &degreeF</p>
+                      <p>Temp: ${data.main.temp} &degF</p>
                       <p>Humidity: ${data.main.humidity}</p>
                       <p>Windspeed: ${data.wind.speed}</p>`;
   main.appendChild(card);
