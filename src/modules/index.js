@@ -2,6 +2,7 @@ import API_KEY from './api';
 
 function createWeatherCard(data) {
   const main = document.getElementById('main');
+  main.innerHTML = '';
   const card = document.createElement('div');
   card.classList.add('weather-card');
   card.innerHTML = `<p>City: ${data.name}</p>
@@ -21,4 +22,13 @@ async function getWeatherData(location) {
     });
 }
 
-getWeatherData('accra');
+const searchBtn = document.getElementById('searchButton');
+searchBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const input = document.getElementById('input');
+  if (input.value === '' || input.value === undefined) {
+    alert('City name cannot be empty');
+  }
+
+  getWeatherData(input.value);
+});
